@@ -2,7 +2,12 @@ let valid_date = document.getElementById("date");
 let time = document.getElementById("time");
 let timer = document.getElementById("timer");
 let id_date = document.getElementById("id_date");
-let date = new Date("21 May 2022");
+let date = new Date();
+let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"];
+let today_day = date.getDate() -1;
+let today_month = months[date.getMonth()];
+let today_year =  date.getFullYear();
+console.log(today_day + today_month + today_year);
 let newDate = new Date();
 let t;
 console.log(date);
@@ -17,7 +22,7 @@ let getminutes = newDate.getMinutes();
 }else{
     t = gethours + ":" + getminutes;
 }
-valid_date.innerHTML = date.toDateString();
+valid_date.innerHTML = today_day + " " + today_month + " " + today_year;
 time.innerHTML = t; 
 next_week = newDate.setDate(newDate.getDate() + 6);
 console.log(next_week);
