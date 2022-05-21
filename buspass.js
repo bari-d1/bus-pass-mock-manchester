@@ -29,7 +29,7 @@ console.log(next_week);
 var countDownDate = new Date(next_week).getTime();
 const id_year = date.getFullYear() * 1e4; // 1e4 gives us the the other digits to be filled later, so 20210000.
 const id_month = (date.getMonth() + 1) * 100; // months are numbered 0-11 in JavaScript, * 100 to move two digits to the left. 20210011 => 20211100
-const id_day = date.getDate(); // 20211100 => 20211124
+const id_day = date.getDate()-1; // 20211100 => 20211124
 const result = id_year + id_month + id_day + '' // `+ ''` to convert to string from number, 20211124 => "20211124"
 id_date.innerHTML = result;
 
